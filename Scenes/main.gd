@@ -15,3 +15,9 @@ func _setScore(blackShotCount, whiteShotCount):
 	if (blackShotCount && whiteShotCount) == 12:
 		$Score.set_text = ("  Player 1: " + Global.woodPoints + "\n  Player 2: " + Global.blackPoints)
 	pass
+
+# Checks if disc is on board still
+func _boardCheck():
+	if !$disc.is_in_node($board):
+		queue_free()
+	pass
