@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://b2w8lsas4gtbj"]
 
 [ext_resource type="Script" path="res://Scenes/Title.gd" id="1_5abma"]
-[ext_resource type="Texture2D" uid="uid://nj0lf2d42j7d" path="res://Assets/Images/WoodenBackground.jpg" id="2_fgatc"]
+[ext_resource type="Texture2D" uid="uid://nj0lf2d42j7d" path="res://Assets/Sprites/WoodenBackground.jpg" id="2_fgatc"]
 
 [node name="Title" type="Control"]
 layout_mode = 3
