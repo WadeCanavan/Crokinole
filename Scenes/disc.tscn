@@ -1,3 +1,19 @@
-[gd_scene format=3 uid="uid://d2djok8i5ibe8"]
+[gd_scene load_steps=3 format=3 uid="uid://cno7sihcglocf"]
+
+[ext_resource type="Texture2D" uid="uid://di16b63182u02" path="res://Assets/Sprites/crokinoleboard.png" id="1_851gs"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_crb3j"]
+radius = 270.007
 
 [node name="Main" type="Node2D"]
+
+[node name="board" type="RigidBody2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="board"]
+position = Vector2(577, 316.039)
+scale = Vector2(0.337744, 0.344079)
+texture = ExtResource("1_851gs")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="board"]
+position = Vector2(576, 320)
+shape = SubResource("CircleShape2D_crb3j")
