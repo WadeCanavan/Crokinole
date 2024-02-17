@@ -18,3 +18,8 @@ config/icon="res://icon.svg"
 [dotnet]
 
 project/assembly_name="Crokinole"
+
+[physics]
+
+2d/default_gravity=0.0
+2d/default_gravity_vector=Vector2(0, 0)

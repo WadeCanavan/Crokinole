@@ -38,11 +38,26 @@ grow_horizontal = 2
 grow_vertical = 2
 text = "Play Game"
 
+[node name="HelpButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.435
+anchor_top = 0.62
+anchor_right = 0.563
+anchor_bottom = 0.698
+offset_left = 34.88
+offset_top = 61.24
+offset_right = -40.576
+offset_bottom = 41.696
+grow_horizontal = 2
+grow_vertical = 2
+text = "Rules"
+
 [node name="WelcomeLAbel" type="RichTextLabel" parent="."]
 layout_mode = 0
-offset_left = 273.0
+offset_left = 280.0
 offset_top = 146.0
-offset_right = 881.0
+offset_right = 888.0
 offset_bottom = 214.0
 theme_override_colors/default_color = Color(0.988235, 0.988235, 0.988235, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
@@ -52,3 +67,4 @@ text = "      Welcome to Crokinole"
 shortcut_keys_enabled = false
 
 [connection signal="pressed" from="PlayGameButton" to="." method="_on_play_game_button_pressed"]
+[connection signal="pressed" from="HelpButton" to="." method="_on_help_button_pressed"]

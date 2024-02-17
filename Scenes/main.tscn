@@ -1,6 +1,8 @@
 [gd_scene load_steps=7 format=3 uid="uid://cwx8tiulhosp8"]
+4bd1c95469fb3c9a923231ce699c02ee27baa39c
 
 [ext_resource type="Texture2D" uid="uid://di16b63182u02" path="res://Assets/Sprites/crokinoleboard.png" id="1_cmi87"]
+[ext_resource type="PackedScene" uid="uid://cno7sihcglocf" path="res://Scenes/disc.tscn" id="2_ak6xp"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_crb3j"]
 radius = 270.007
@@ -95,3 +97,4 @@ debug_color = Color(1, 1, 1, 0.419608)
 position = Vector2(-2, 0)
 shape = SubResource("CircleShape2D_4536c")
 debug_color = Color(1, 1, 1, 0.419608)
+

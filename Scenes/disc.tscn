@@ -1,17 +1,23 @@
-[gd_scene load_steps=3 format=3 uid="uid://cno7sihcglocf"]
+[gd_scene load_steps=4 format=3 uid="uid://cno7sihcglocf"]
 
+[ext_resource type="Script" path="res://Scenes/disc.gd" id="1_5wjyq"]
 [ext_resource type="Texture2D" uid="uid://c6kxhew26btlt" path="res://Assets/Sprites/blank-round-wooden-sign-free-png.png" id="1_noab2"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_nru0h"]
 radius = 270.007
 
 [node name="RigidBody2D" type="RigidBody2D"]
+linear_damp = 30.781
+script = ExtResource("1_5wjyq")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(576, 320)
-scale = Vector2(0.283481, 0.283333)
+scale = Vector2(0.0281397, 0.028125)
 texture = ExtResource("1_noab2")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(576, 320)
+scale = Vector2(0.1, 0.1)
 shape = SubResource("CircleShape2D_nru0h")
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]
