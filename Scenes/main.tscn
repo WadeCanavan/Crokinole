@@ -1,8 +1,9 @@
-[gd_scene load_steps=10 format=3 uid="uid://cwx8tiulhosp8"]
+[gd_scene load_steps=11 format=3 uid="uid://cwx8tiulhosp8"]
 
+[ext_resource type="Script" path="res://Scenes/main.gd" id="1_0gtyu"]
 [ext_resource type="Texture2D" uid="uid://di16b63182u02" path="res://Assets/Sprites/crokinoleboard.png" id="1_cmi87"]
 [ext_resource type="Script" path="res://Scenes/Score Nodes.gd" id="2_1mk02"]
-[ext_resource type="PackedScene" uid="uid://bry3ob2hkhwpf" path="res://Scenes/disc.tscn" id="2_ejfwc"]
+[ext_resource type="PackedScene" path="res://Scenes/disc.tscn" id="2_ejfwc"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_crb3j"]
 radius = 270.007
@@ -23,6 +24,7 @@ radius = 162.265
 radius = 4.12311
 
 [node name="Main" type="Node2D"]
+script = ExtResource("1_0gtyu")
 
 [node name="board" type="StaticBody2D" parent="."]
 
@@ -133,6 +135,25 @@ position = Vector2(547, 244)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Peggage/Peg 8"]
 position = Vector2(-1, 0)
 shape = SubResource("CircleShape2D_f24vr")
+
+[node name="Score Box" type="Node" parent="."]
+
+[node name="Score" type="RichTextLabel" parent="Score Box"]
+anchors_preset = -1
+anchor_left = 0.016
+anchor_top = 0.028
+anchor_right = 0.233
+anchor_bottom = 0.252
+offset_left = -0.432001
+offset_top = -0.144001
+offset_right = -0.416016
+offset_bottom = -0.296005
+grow_horizontal = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 15
+theme_override_font_sizes/normal_font_size = 25
+text = "  Player 1:
+  Player 2:"
 
 [connection signal="body_entered" from="Score Nodes/20 point" to="Score Nodes" method="_on__point_body_entered"]
 [connection signal="body_entered" from="Score Nodes/15 point Area2D" to="Score Nodes" method="_on_area_2d_body_entered"]
