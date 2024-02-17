@@ -35,4 +35,5 @@ func _on__point_body_entered(body):
 		Global.woodPoints =  Global.woodPoints +20
 	else :
 		if body.is_in_group("blackDisk") :
+			
 			Global.blackPoints = Global.blackPoints +20

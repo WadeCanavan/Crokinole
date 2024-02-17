@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://d0bg8mtvrtchh"]
+[gd_scene load_steps=3 format=3 uid="uid://dw2xo6r66r8dc"]
 
 [ext_resource type="Script" path="res://Scenes/Title.gd" id="1_2y45y"]
 [ext_resource type="Texture2D" uid="uid://dxbry6dgbj6ir" path="res://Assets/Sprites/WoodenBackground2.jpg" id="2_npg84"]
@@ -40,11 +40,16 @@ text = "Play Game"
 
 [node name="Rules Label" type="RichTextLabel" parent="."]
 clip_contents = false
-layout_mode = 0
-offset_left = 382.0
-offset_top = 26.0
-offset_right = 990.0
-offset_bottom = 94.0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.332
+anchor_top = 0.04
+anchor_right = 0.682
+anchor_bottom = 0.145
+offset_left = -0.46402
+offset_top = 0.079998
+offset_right = 0.335938
+offset_bottom = 0.0399933
 theme_override_colors/default_color = Color(0.988235, 0.988235, 0.988235, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 35
@@ -54,11 +59,16 @@ shortcut_keys_enabled = false
 
 [node name="Controls Label" type="RichTextLabel" parent="."]
 clip_contents = false
-layout_mode = 0
-offset_left = 448.0
-offset_top = 327.0
-offset_right = 1056.0
-offset_bottom = 395.0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.389
+anchor_top = 0.505
+anchor_right = 0.618
+anchor_bottom = 0.61
+offset_left = -0.128021
+offset_top = -0.23999
+offset_right = 0.0639648
+offset_bottom = -0.279999
 theme_override_colors/default_color = Color(0.988235, 0.988235, 0.988235, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 35
@@ -69,11 +79,16 @@ shortcut_keys_enabled = false
 
 [node name="Rules" type="RichTextLabel" parent="."]
 clip_contents = false
-layout_mode = 0
-offset_left = 128.0
-offset_top = 104.0
-offset_right = 1024.0
-offset_bottom = 544.0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.111
+anchor_top = 0.16
+anchor_right = 0.889
+anchor_bottom = 0.785
+offset_left = 0.127991
+offset_top = 0.319992
+offset_right = -0.128052
+offset_bottom = 35.32
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 5
 text = "a) lf any opposing discs are in play, at least one of the shooters discs must strike an opposing disc either directly or by bumping one of their discs already in play into an opposing disc. If an opposing disc is not hit, it is not a valid shot.
