@@ -1,9 +1,21 @@
-[gd_scene load_steps=3 format=3 uid="uid://cwx8tiulhosp8"]
+[gd_scene load_steps=7 format=3 uid="uid://cwx8tiulhosp8"]
 
 [ext_resource type="Texture2D" uid="uid://di16b63182u02" path="res://Assets/Sprites/crokinoleboard.png" id="1_cmi87"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_crb3j"]
 radius = 270.007
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_het8c"]
+radius = 244.818
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ktxo6"]
+radius = 162.265
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ywk5q"]
+radius = 80.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4536c"]
+radius = 14.1421
 
 [node name="Main" type="Node2D"]
 
@@ -15,5 +27,71 @@ scale = Vector2(0.337744, 0.344079)
 texture = ExtResource("1_cmi87")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="board"]
+visible = false
 position = Vector2(576, 320)
 shape = SubResource("CircleShape2D_crb3j")
+
+[node name="Score Nodes" type="Node" parent="."]
+
+[node name="5 point zone" type="RigidBody2D" parent="Score Nodes"]
+visible = false
+
+[node name="5 point circle" type="CollisionShape2D" parent="Score Nodes/5 point zone"]
+position = Vector2(576, 320)
+shape = SubResource("CircleShape2D_het8c")
+debug_color = Color(1, 0.341176, 1, 0.419608)
+
+[node name="Area2D" type="Area2D" parent="Score Nodes/5 point zone"]
+
+[node name="Area2D Circle" type="CollisionShape2D" parent="Score Nodes/5 point zone/Area2D"]
+position = Vector2(576, 320)
+shape = SubResource("CircleShape2D_het8c")
+debug_color = Color(1, 0.341176, 1, 0.419608)
+
+[node name="10 point zone" type="RigidBody2D" parent="Score Nodes"]
+visible = false
+position = Vector2(576, 320)
+
+[node name="10 point circle" type="CollisionShape2D" parent="Score Nodes/10 point zone"]
+position = Vector2(-1, 0)
+shape = SubResource("CircleShape2D_ktxo6")
+debug_color = Color(1, 0.341176, 1, 0.419608)
+
+[node name="10 point Area2D" type="Area2D" parent="Score Nodes/10 point zone"]
+
+[node name="10 point Area2D circle" type="CollisionShape2D" parent="Score Nodes/10 point zone/10 point Area2D"]
+position = Vector2(-1, 0)
+shape = SubResource("CircleShape2D_ktxo6")
+debug_color = Color(1, 0.341176, 1, 0.419608)
+
+[node name="15 point zone" type="RigidBody2D" parent="Score Nodes"]
+visible = false
+position = Vector2(576, 320)
+
+[node name="15 point circle" type="CollisionShape2D" parent="Score Nodes/15 point zone"]
+position = Vector2(-1, 0)
+shape = SubResource("CircleShape2D_ywk5q")
+debug_color = Color(1, 0, 0, 0.603922)
+
+[node name="15 point Area2D" type="Area2D" parent="Score Nodes/15 point zone"]
+
+[node name="15 point Area2D circle" type="CollisionShape2D" parent="Score Nodes/15 point zone/15 point Area2D"]
+position = Vector2(-2, 0)
+shape = SubResource("CircleShape2D_ywk5q")
+debug_color = Color(1, 0, 0, 0.603922)
+
+[node name="20 point zone" type="RigidBody2D" parent="Score Nodes"]
+visible = false
+position = Vector2(576, 320)
+
+[node name="20 point circle" type="CollisionShape2D" parent="Score Nodes/20 point zone"]
+position = Vector2(-2, 0)
+shape = SubResource("CircleShape2D_4536c")
+debug_color = Color(1, 1, 1, 0.419608)
+
+[node name="Area2D" type="Area2D" parent="Score Nodes/20 point zone"]
+
+[node name="20 point Area2D Circle" type="CollisionShape2D" parent="Score Nodes/20 point zone/Area2D"]
+position = Vector2(-2, 0)
+shape = SubResource("CircleShape2D_4536c")
+debug_color = Color(1, 1, 1, 0.419608)
