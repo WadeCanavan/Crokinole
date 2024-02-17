@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://di16b63182u02" path="res://Assets/Sprites/crokinoleboard.png" id="1_cmi87"]
 [ext_resource type="Script" path="res://Scenes/Score Nodes.gd" id="2_1mk02"]
-[ext_resource type="PackedScene" path="res://Scenes/disc.tscn" id="2_ejfwc"]
+[ext_resource type="PackedScene" uid="uid://bry3ob2hkhwpf" path="res://Scenes/disc.tscn" id="2_ejfwc"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_crb3j"]
 radius = 270.007
@@ -65,7 +65,7 @@ position = Vector2(576, 320)
 shape = SubResource("CircleShape2D_het8c")
 debug_color = Color(1, 0.341176, 1, 0.419608)
 
-[node name="10 point Area2D" type="Area2D" parent="Score Nodes"]
+[node name="10 point Area2D" type="Area2D" parent="Score Nodes" groups=["blackDisk", "woodDisk"]]
 visible = false
 position = Vector2(576, 320)
 
@@ -133,3 +133,11 @@ position = Vector2(547, 244)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Peggage/Peg 8"]
 position = Vector2(-1, 0)
 shape = SubResource("CircleShape2D_f24vr")
+
+[connection signal="body_entered" from="Score Nodes/20 point" to="Score Nodes" method="_on__point_body_entered"]
+[connection signal="body_entered" from="Score Nodes/15 point Area2D" to="Score Nodes" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Score Nodes/15 point Area2D" to="Score Nodes" method="_on_area_2d_body_exited"]
+[connection signal="body_entered" from="Score Nodes/Area2D" to="Score Nodes" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Score Nodes/Area2D" to="Score Nodes" method="_on_area_2d_body_exited"]
+[connection signal="body_entered" from="Score Nodes/10 point Area2D" to="Score Nodes" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Score Nodes/10 point Area2D" to="Score Nodes" method="_on_area_2d_body_exited"]
