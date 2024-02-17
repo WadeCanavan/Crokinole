@@ -11,5 +11,7 @@ func _process(delta):
 	pass
 
 # Function to change the score box
-func _setScore():
-	
+func _setScore(blackShotCount, whiteShotCount):
+	if (blackShotCount && whiteShotCount) == 12:
+		$Score.set_text = ("Player 1: " + Global.woodPoints + "\nPlayer 2: " + Global.blackPoints)
+	pass
