@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://cwx8tiulhosp8"]
+[gd_scene load_steps=10 format=3 uid="uid://cwx8tiulhosp8"]
 
 [ext_resource type="Texture2D" uid="uid://di16b63182u02" path="res://Assets/Sprites/crokinoleboard.png" id="1_cmi87"]
 [ext_resource type="Script" path="res://Scenes/Score Nodes.gd" id="2_1mk02"]
@@ -18,6 +18,9 @@ radius = 244.818
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ktxo6"]
 radius = 162.265
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_f24vr"]
+radius = 4.12311
 
 [node name="Main" type="Node2D"]
 
@@ -74,4 +77,59 @@ debug_color = Color(1, 0.341176, 1, 0.419608)
 [node name="RigidBody2D" parent="." instance=ExtResource("2_ejfwc")]
 visible = false
 
-[node name="Bouncy Pegs" type="Node" parent="."]
+[node name="Peggage" type="Node" parent="."]
+
+[node name="Peg 1" type="StaticBody2D" parent="Peggage"]
+position = Vector2(500, 287)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Peggage/Peg 1"]
+shape = SubResource("CircleShape2D_f24vr")
+
+[node name="Peg 2" type="StaticBody2D" parent="Peggage"]
+position = Vector2(499, 346)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Peggage/Peg 2"]
+position = Vector2(-1, 0)
+shape = SubResource("CircleShape2D_f24vr")
+
+[node name="Peg 3" type="StaticBody2D" parent="Peggage"]
+position = Vector2(539, 390)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Peggage/Peg 3"]
+position = Vector2(-1, 0)
+shape = SubResource("CircleShape2D_f24vr")
+
+[node name="Peg 4" type="StaticBody2D" parent="Peggage"]
+position = Vector2(603, 394)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Peggage/Peg 4"]
+position = Vector2(-1, 0)
+shape = SubResource("CircleShape2D_f24vr")
+
+[node name="Peg 5" type="StaticBody2D" parent="Peggage"]
+position = Vector2(650, 348)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Peggage/Peg 5"]
+position = Vector2(-1, 0)
+shape = SubResource("CircleShape2D_f24vr")
+
+[node name="Peg 6" type="StaticBody2D" parent="Peggage"]
+position = Vector2(651, 287)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Peggage/Peg 6"]
+position = Vector2(-1, 0)
+shape = SubResource("CircleShape2D_f24vr")
+
+[node name="Peg 7" type="StaticBody2D" parent="Peggage"]
+position = Vector2(611, 246)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Peggage/Peg 7"]
+position = Vector2(-1, 0)
+shape = SubResource("CircleShape2D_f24vr")
+
+[node name="Peg 8" type="StaticBody2D" parent="Peggage"]
+position = Vector2(547, 244)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Peggage/Peg 8"]
+position = Vector2(-1, 0)
+shape = SubResource("CircleShape2D_f24vr")
