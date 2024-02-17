@@ -1,13 +1,13 @@
 [gd_scene load_steps=4 format=3 uid="uid://cno7sihcglocf"]
 
-[ext_resource type="Script" path="res://Scenes/disc.gd" id="1_5wjyq"]
+[ext_resource type="Script" path="res://Scripts/disc.gd" id="1_5wjyq"]
 [ext_resource type="Texture2D" uid="uid://c6kxhew26btlt" path="res://Assets/Sprites/blank-round-wooden-sign-free-png.png" id="1_noab2"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_nru0h"]
 radius = 240.0
 
-[node name="RigidBody2D" type="RigidBody2D"]
-linear_damp = 30.781
+[node name="disc" type="RigidBody2D"]
+input_pickable = true
 script = ExtResource("1_5wjyq")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

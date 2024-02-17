@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://d0bg8mtvrtchh"]
 
-[ext_resource type="Script" path="res://Scenes/Title.gd" id="1_2y45y"]
+[ext_resource type="Script" path="res://Scripts/Title.gd" id="1_2y45y"]
 [ext_resource type="Texture2D" uid="uid://dxbry6dgbj6ir" path="res://Assets/Sprites/WoodenBackground2.jpg" id="2_npg84"]
 
 [node name="Help" type="Control"]
