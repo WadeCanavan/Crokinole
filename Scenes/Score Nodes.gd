@@ -31,11 +31,22 @@ func _on_area_2d_body_exited(body):
 
 
 func _on__point_body_entered(body):
-	if body.is_in_group("woodDisk") and body.linear_velocity :
+	if body.is_in_group("woodDisk") and body.linear_velocity == 0:
 		Global.woodPoints =  Global.woodPoints +20
 		queue_free()
 	else :
-		if body.is_in_group("blackDisk") and body.linear_velocity :
+		if body.is_in_group("blackDisk") and body.linear_velocity == 0:
 			
 			Global.blackPoints = Global.blackPoints +20
+			queue_free()
+
+
+func _on_play_area_body_exited(body):
+	if body.is_in_group("woodDisk") :
+		
+		queue_free()
+	else :
+		if body.is_in_group("blackDisk") :
+			
+			
 			queue_free()
