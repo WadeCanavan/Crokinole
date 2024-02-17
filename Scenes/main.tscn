@@ -136,6 +136,9 @@ position = Vector2(547, 244)
 position = Vector2(-1, 0)
 shape = SubResource("CircleShape2D_f24vr")
 
+[node name="disc" parent="." instance=ExtResource("2_ejfwc")]
+position = Vector2(-1, 0)
+
 [node name="Score Box" type="Node" parent="."]
 
 [node name="Score" type="RichTextLabel" parent="Score Box"]

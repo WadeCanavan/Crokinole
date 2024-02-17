@@ -7,17 +7,19 @@
 radius = 240.0
 
 [node name="disc" type="RigidBody2D"]
+position = Vector2(576, 320)
 input_pickable = true
+linear_damp = 2.0
 script = ExtResource("1_5wjyq")
 
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, 3.05176e-05)
+scale = Vector2(0.0125065, 0.0125)
+texture = ExtResource("1_noab2")
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(576, 320)
+position = Vector2(6.10352e-05, 3.05176e-05)
 scale = Vector2(0.05, 0.05)
 shape = SubResource("CircleShape2D_nru0h")
-
-[node name="Sprite2D" type="Sprite2D" parent="CollisionShape2D"]
-position = Vector2(-0.000727654, 9.44138e-05)
-scale = Vector2(0.25013, 0.25)
-texture = ExtResource("1_noab2")
 
 [connection signal="input_event" from="." to="." method="_on_input_event"]

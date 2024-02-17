@@ -1,38 +1,19 @@
 extends RigidBody2D
 
-var beingHeld = false
-
-func _unhandled_input(_event):
-	if not Input.is_action_pressed("click") and beingHeld:
-		beingHeld = false
-		set_deferred("gravity_scale", 0)
-		set_collision_layer_value(1, true)
-		set_collision_mask_value(1, true)
-		set_collision_mask_value(32, false)
-
-func _on_input_event(_viewport, _event, _shape_idx):
-	print("pressed")
-	if Input.is_action_just_pressed("click"):
-		beingHeld = true
-		set_deferred("gravity_scale", 1)
-		set_collision_layer_value(1, false)
-		set_collision_mask_value(1, false)
-		set_collision_mask_value(32, true)
-		var tween = create_tween()
-		tween.tween_property(self, "rotation", 0, 0.1)
-
-func _integrate_forces(_state):
-	if beingHeld:
-		var mousePos = get_global_mouse_position()
-		var distance = global_position.distance_to(mousePos)
-		var direction = global_position.direction_to(mousePos)
-		rotation = 0 
-		set_linear_velocity(direction * distance * 15)
-
-############### Object Functions ################
-@export_enum("Potion", "Ingredient") var object_type: String
-@export var object_data:Resource
-
-func data_updated():
-	if object_data and object_data.image != null:
-		$"DraggableSprite".texture = object_data.image
+var pressed = false
+var clickPos
+func _on_input_event(viewport, event, shape_idx):
+	if event is InputEventMouseButton and  event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
+			print("Left button was clicked at ", event.position)
+			clickPos = event.position
+			pressed = true
+			
+func _input(event):
+	if event is InputEventMouseButton and  event.button_index == MOUSE_BUTTON_LEFT and not event.pressed and pressed:
+			pressed = false
+			print("Left button was released at ", event.position)
+			var force = Vector2(clickPos.x - event.position.x, clickPos.y - event.position.y)
+			var distance = sqrt(pow(clickPos.x - event.position.x,2) + pow(clickPos.y - event.position.y, 2))
+			print("distance to disc ", distance)
+			print(clickPos.x, event.position.x, clickPos.y, event.position.y)
+			linear_velocity = force * 5
