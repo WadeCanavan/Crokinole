@@ -11,5 +11,12 @@ func _process(delta):
 	pass
 
 
+
+
 func _on_play_game_button_pressed():
 	get_tree().change_scene_to_file("res://Scenes/main.tscn")
+
+
+
+func _on_help_button_pressed():
+	get_tree().change_scene_to_file("res://Scenes/Help.tscn")
