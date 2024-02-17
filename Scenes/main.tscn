@@ -1,8 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://cwx8tiulhosp8"]
-4bd1c95469fb3c9a923231ce699c02ee27baa39c
+[gd_scene load_steps=8 format=3 uid="uid://cwx8tiulhosp8"]
 
 [ext_resource type="Texture2D" uid="uid://di16b63182u02" path="res://Assets/Sprites/crokinoleboard.png" id="1_cmi87"]
-[ext_resource type="PackedScene" uid="uid://cno7sihcglocf" path="res://Scenes/disc.tscn" id="2_ak6xp"]
+[ext_resource type="PackedScene" path="res://Scenes/disc.tscn" id="2_ejfwc"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_crb3j"]
 radius = 270.007
@@ -23,15 +22,14 @@ radius = 14.1421
 
 [node name="board" type="StaticBody2D" parent="."]
 
+[node name="CollisionShape2D" type="CollisionShape2D" parent="board"]
+position = Vector2(576, 320)
+shape = SubResource("CircleShape2D_crb3j")
+
 [node name="Sprite2D" type="Sprite2D" parent="board"]
 position = Vector2(577, 316.039)
 scale = Vector2(0.337744, 0.344079)
 texture = ExtResource("1_cmi87")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="board"]
-visible = false
-position = Vector2(576, 320)
-shape = SubResource("CircleShape2D_crb3j")
 
 [node name="Score Nodes" type="Node" parent="."]
 
@@ -98,3 +96,4 @@ position = Vector2(-2, 0)
 shape = SubResource("CircleShape2D_4536c")
 debug_color = Color(1, 1, 1, 0.419608)
 
+[node name="RigidBody2D" parent="." instance=ExtResource("2_ejfwc")]
