@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://cwx8tiulhosp8"]
+[gd_scene load_steps=4 format=3 uid="uid://cwx8tiulhosp8"]
 
 [ext_resource type="Texture2D" uid="uid://di16b63182u02" path="res://Assets/Sprites/crokinoleboard.png" id="1_cmi87"]
+[ext_resource type="PackedScene" uid="uid://cno7sihcglocf" path="res://Scenes/disc.tscn" id="2_ak6xp"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_crb3j"]
 radius = 270.007
@@ -17,3 +18,5 @@ texture = ExtResource("1_cmi87")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="board"]
 position = Vector2(576, 320)
 shape = SubResource("CircleShape2D_crb3j")
+
+[node name="RigidBody2D" parent="." instance=ExtResource("2_ak6xp")]
