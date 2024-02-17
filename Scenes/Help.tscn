@@ -1,9 +1,9 @@
 [gd_scene load_steps=3 format=3 uid="uid://dw2xo6r66r8dc"]
 
 [ext_resource type="Script" path="res://Scenes/Title.gd" id="1_2y45y"]
-[ext_resource type="Texture2D" uid="uid://nj0lf2d42j7d" path="res://Assets/Images/WoodenBackground.jpg" id="2_yxdh0"]
+[ext_resource type="Texture2D" uid="uid://nj0lf2d42j7d" path="res://Assets/Sprites/WoodenBackground.jpg" id="2_yxdh0"]
 
-[node name="Title" type="Control"]
+[node name="Help" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -31,24 +31,61 @@ anchor_top = 0.62
 anchor_right = 0.563
 anchor_bottom = 0.698
 offset_left = -0.120026
-offset_top = 0.23999
+offset_top = 173.24
 offset_right = 0.42395
-offset_bottom = -0.304016
+offset_bottom = 172.696
 grow_horizontal = 2
 grow_vertical = 2
 text = "Play Game"
 
-[node name="WelcomeLAbel" type="RichTextLabel" parent="."]
+[node name="Rules Label" type="RichTextLabel" parent="."]
+clip_contents = false
 layout_mode = 0
-offset_left = 273.0
-offset_top = 146.0
-offset_right = 881.0
-offset_bottom = 214.0
+offset_left = 382.0
+offset_top = 26.0
+offset_right = 990.0
+offset_bottom = 94.0
 theme_override_colors/default_color = Color(0.988235, 0.988235, 0.988235, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 35
 theme_override_font_sizes/normal_font_size = 44
-text = "      Welcome to Crokinole"
+text = "Rules of Crokinole"
 shortcut_keys_enabled = false
+
+[node name="Controls Label" type="RichTextLabel" parent="."]
+clip_contents = false
+layout_mode = 0
+offset_left = 448.0
+offset_top = 327.0
+offset_right = 1056.0
+offset_bottom = 395.0
+theme_override_colors/default_color = Color(0.988235, 0.988235, 0.988235, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 35
+theme_override_font_sizes/normal_font_size = 44
+text = "How to Play
+"
+shortcut_keys_enabled = false
+
+[node name="Rules" type="RichTextLabel" parent="."]
+clip_contents = false
+layout_mode = 0
+offset_left = 128.0
+offset_top = 104.0
+offset_right = 1024.0
+offset_bottom = 544.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+text = "a) lf any opposing discs are in play, at least one of the shooters discs must strike an opposing disc either directly or by bumping one of their discs already in play into an opposing disc. If an opposing disc is not hit, it is not a valid shot.
+b) lf there are no opposing discs in play, the shooting disc or at least one disc struck during the shot must end up touching or within the 15 line.  (A 20 is considered within the 15 line)
+c) lf a valid shot is not made, the shooting disc and all of the other discs that were struck, including any 20's, are removed and placed in the ditch. 
+d) If a disk crosses the shooting line, it is considered out of play and will be removed.
+e) If a disk makes it into the center hole, it is worth 20 points, and should be removed.
+
+
+
+
+Flick!
+"
 
 [connection signal="pressed" from="PlayGameButton" to="." method="_on_play_game_button_pressed"]
