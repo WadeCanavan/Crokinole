@@ -1,0 +1,54 @@
+[gd_scene load_steps=3 format=3 uid="uid://dw2xo6r66r8dc"]
+
+[ext_resource type="Script" path="res://Scenes/Title.gd" id="1_2y45y"]
+[ext_resource type="Texture2D" uid="uid://nj0lf2d42j7d" path="res://Assets/Images/WoodenBackground.jpg" id="2_yxdh0"]
+
+[node name="Title" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_2y45y")
+
+[node name="WoodenBAckground" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_yxdh0")
+expand_mode = 1
+flip_v = true
+
+[node name="PlayGameButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.435
+anchor_top = 0.62
+anchor_right = 0.563
+anchor_bottom = 0.698
+offset_left = -0.120026
+offset_top = 0.23999
+offset_right = 0.42395
+offset_bottom = -0.304016
+grow_horizontal = 2
+grow_vertical = 2
+text = "Play Game"
+
+[node name="WelcomeLAbel" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 273.0
+offset_top = 146.0
+offset_right = 881.0
+offset_bottom = 214.0
+theme_override_colors/default_color = Color(0.988235, 0.988235, 0.988235, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 35
+theme_override_font_sizes/normal_font_size = 44
+text = "      Welcome to Crokinole"
+shortcut_keys_enabled = false
+
+[connection signal="pressed" from="PlayGameButton" to="." method="_on_play_game_button_pressed"]
