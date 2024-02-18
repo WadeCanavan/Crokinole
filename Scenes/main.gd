@@ -6,6 +6,7 @@ var blackShotCount = 0
 func _ready():
 	var disc = $Discs/disc
 	disc.discShot.connect(on_disc_shot)
+	disc.endShot.connect(on_disc_stop)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -33,3 +34,5 @@ func _boardCheck():
 func on_disc_shot():
 	print("signaled")
 
+func on_disc_stop():
+	print("signaled uwu")

@@ -7,8 +7,14 @@ var lastValue = 0
 var curValue = 0 
 var shot = false
 signal discShot
+signal endShot
+var signaled = false
 
-
+func _process(delta):
+	if shot && (linear_velocity.x > -1) && (linear_velocity.y > -1) && (linear_velocity.x < 1) && (linear_velocity.y < 1) && !signaled:
+		endShot.emit()
+		signaled = true
+		print(linear_velocity)
 	
 func _on_input_event(viewport, event, shape_idx):
 	if event is InputEventMouseButton and  event.button_index == MOUSE_BUTTON_LEFT and event.pressed and not shot:
@@ -27,6 +33,7 @@ func _input(event):
 			linear_velocity = force * 5
 			shot = true
 			discShot.emit()
+			
 
 func _integrate_forces(state):
 	#print(curValue)
@@ -46,3 +53,4 @@ func _on_h_slider_value_changed(value):
 		curValue = value/200 * -1 
 	print(lastValue, "  ", value, "  ", curValue)
 	lastValue = value
+
