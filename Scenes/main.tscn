@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://Scenes/main.gd" id="1_0gtyu"]
 [ext_resource type="Texture2D" uid="uid://di16b63182u02" path="res://Assets/Sprites/crokinoleboard.png" id="1_cmi87"]
 [ext_resource type="Script" path="res://Scenes/Score Nodes.gd" id="2_1mk02"]
-[ext_resource type="PackedScene" uid="uid://cno7sihcglocf" path="res://Scenes/disc.tscn" id="2_ejfwc"]
+[ext_resource type="PackedScene" uid="uid://bry3ob2hkhwpf" path="res://Scenes/disc.tscn" id="2_ejfwc"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_crb3j"]
 radius = 270.007
@@ -41,7 +41,7 @@ a = Vector2(643, -191)
 b = Vector2(384, -190)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_4536c"]
-radius = 14.1421
+radius = 7.07107
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ywk5q"]
 radius = 80.0
@@ -104,7 +104,6 @@ shape = SubResource("SegmentShape2D_yxm4i")
 script = ExtResource("2_1mk02")
 
 [node name="20 point" type="Area2D" parent="Score Nodes"]
-visible = false
 position = Vector2(576, 320)
 
 [node name="20 point Area2D Circle" type="CollisionShape2D" parent="Score Nodes/20 point"]
