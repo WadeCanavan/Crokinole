@@ -29,4 +29,4 @@ func on_disc_shot():
 	print("signaled")
 
 func on_disc_stop():
-	print("signaled uwu")
+	get_node("/root/Main/scoreBox/Score").text = str("  Player 1: ", Global.woodPoints, "\n  Player 2: ", Global.blackPoints)

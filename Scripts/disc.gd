@@ -16,7 +16,6 @@ func _process(delta):
 		endShot.emit()
 		signaled = true
 		print(linear_velocity)
-		get_node("/root/Main/scoreBox/Score").text = str("  Player 1: ", Global.woodPoints, "\n  Player 2: ", Global.blackPoints)
 		counter=+1
 		print(counter)
 		#if counter == 12
