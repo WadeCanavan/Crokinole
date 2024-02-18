@@ -112,6 +112,16 @@ position = Vector2(-2, 0)
 shape = SubResource("CircleShape2D_4536c")
 debug_color = Color(1, 1, 1, 0.419608)
 
+[node name="RichTextLabel" type="RichTextLabel" parent="Score Nodes/20 point"]
+clip_contents = false
+offset_left = -156.0
+offset_top = -289.0
+offset_right = 161.0
+offset_bottom = -249.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 9
+text = "You just sunk it in the center! +20 points!"
+
 [node name="15 point Area2D" type="Area2D" parent="Score Nodes"]
 visible = false
 position = Vector2(576, 320)
