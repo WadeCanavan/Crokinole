@@ -208,14 +208,14 @@ shape = SubResource("CircleShape2D_f24vr")
 
 [node name="Discs" type="Node2D" parent="."]
 
-[node name="HSlider" type="HSlider" parent="Disc"]
+[node name="disc" parent="Discs" groups=["woodDisk"] instance=ExtResource("2_ejfwc")]
+position = Vector2(768, 472)
+
+[node name="Disc#HSlider" type="HSlider" parent="."]
 offset_left = 848.0
 offset_top = 536.0
 offset_right = 1112.0
 offset_bottom = 552.0
-
-[node name="disc" parent="Discs" groups=["woodDisk"] instance=ExtResource("2_ejfwc")]
-position = Vector2(768, 472)
 
 [node name="HSlider" type="HSlider" parent="."]
 offset_left = 210.0
@@ -225,6 +225,7 @@ offset_bottom = 202.0
 min_value = -0.5
 max_value = 0.5
 step = 0.01
+value = 0.5
 
 [node name="Score Box" type="Node" parent="."]
 
