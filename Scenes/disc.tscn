@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://bry3ob2hkhwpf"]
+[gd_scene load_steps=4 format=3 uid="uid://cno7sihcglocf"]
 
 [ext_resource type="Script" path="res://Scripts/disc.gd" id="1_5wjyq"]
 [ext_resource type="Texture2D" uid="uid://c6kxhew26btlt" path="res://Assets/Sprites/blank-round-wooden-sign-free-png.png" id="1_noab2"]

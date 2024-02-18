@@ -207,10 +207,15 @@ position = Vector2(-1, 0)
 shape = SubResource("CircleShape2D_f24vr")
 
 [node name="Disc" type="Node2D" parent="."]
-position = Vector2(359, 319)
+
+[node name="HSlider" type="HSlider" parent="Disc"]
+offset_left = 848.0
+offset_top = 536.0
+offset_right = 1112.0
+offset_bottom = 552.0
 
 [node name="disc" parent="Disc" instance=ExtResource("2_ejfwc")]
-position = Vector2(0, 0)
+position = Vector2(768, 472)
 
 [node name="Score Box" type="Node" parent="."]
 
@@ -238,3 +243,4 @@ text = "  Player 1:
 [connection signal="body_exited" from="Score Nodes/Area2D" to="Score Nodes" method="_on_play_area_body_exited"]
 [connection signal="body_entered" from="Score Nodes/10 point Area2D" to="Score Nodes" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Score Nodes/10 point Area2D" to="Score Nodes" method="_on_area_2d_body_exited"]
+[connection signal="value_changed" from="Disc/HSlider" to="." method="_on_h_slider_value_changed"]
