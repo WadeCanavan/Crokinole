@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://Scenes/main.gd" id="1_0gtyu"]
 [ext_resource type="Texture2D" uid="uid://di16b63182u02" path="res://Assets/Sprites/crokinoleboard.png" id="1_cmi87"]
 [ext_resource type="Script" path="res://Scenes/Score Nodes.gd" id="2_1mk02"]
-[ext_resource type="PackedScene" uid="uid://bry3ob2hkhwpf" path="res://Scenes/disc.tscn" id="2_ejfwc"]
+[ext_resource type="PackedScene" uid="uid://cno7sihcglocf" path="res://Scenes/disc.tscn" id="2_ejfwc"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_crb3j"]
 radius = 270.007
@@ -106,8 +106,6 @@ script = ExtResource("2_1mk02")
 [node name="20 point" type="Area2D" parent="Score Nodes"]
 visible = false
 position = Vector2(576, 320)
-disable_mode = 2
-monitorable = false
 
 [node name="20 point Area2D Circle" type="CollisionShape2D" parent="Score Nodes/20 point"]
 position = Vector2(-2, 0)
@@ -117,8 +115,6 @@ debug_color = Color(1, 1, 1, 0.419608)
 [node name="15 point Area2D" type="Area2D" parent="Score Nodes"]
 visible = false
 position = Vector2(576, 320)
-disable_mode = 2
-monitorable = false
 
 [node name="15 point Area2D circle" type="CollisionShape2D" parent="Score Nodes/15 point Area2D"]
 position = Vector2(-2, 0)
@@ -127,8 +123,6 @@ debug_color = Color(1, 0, 0, 0.603922)
 
 [node name="Area2D" type="Area2D" parent="Score Nodes"]
 visible = false
-disable_mode = 2
-monitorable = false
 
 [node name="Area2D Circle" type="CollisionShape2D" parent="Score Nodes/Area2D"]
 position = Vector2(576, 320)
@@ -138,13 +132,14 @@ debug_color = Color(1, 0.341176, 1, 0.419608)
 [node name="10 point Area2D" type="Area2D" parent="Score Nodes" groups=["blackDisk", "woodDisk"]]
 visible = false
 position = Vector2(576, 320)
-disable_mode = 2
-monitorable = false
 
 [node name="10 point Area2D circle" type="CollisionShape2D" parent="Score Nodes/10 point Area2D"]
 position = Vector2(-1, 0)
 shape = SubResource("CircleShape2D_ktxo6")
 debug_color = Color(1, 0.341176, 1, 0.419608)
+
+[node name="RigidBody2D" parent="." instance=ExtResource("2_ejfwc")]
+visible = false
 
 [node name="Peggage" type="Node" parent="."]
 
@@ -211,7 +206,7 @@ position = Vector2(547, 244)
 position = Vector2(-1, 0)
 shape = SubResource("CircleShape2D_f24vr")
 
-[node name="disc" parent="." groups=["woodDisk"] instance=ExtResource("2_ejfwc")]
+[node name="disc" parent="." instance=ExtResource("2_ejfwc")]
 position = Vector2(359, 319)
 
 [node name="Score Box" type="Node" parent="."]
