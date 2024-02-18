@@ -65,6 +65,7 @@ collision_layer = 2
 visible = false
 position = Vector2(576, 320)
 shape = SubResource("CircleShape2D_crb3j")
+disabled = true
 
 [node name="Sprite2D" type="Sprite2D" parent="board"]
 position = Vector2(577, 316.039)
