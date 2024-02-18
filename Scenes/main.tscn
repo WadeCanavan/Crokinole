@@ -1,8 +1,9 @@
-[gd_scene load_steps=20 format=3 uid="uid://cwx8tiulhosp8"]
+[gd_scene load_steps=21 format=3 uid="uid://cwx8tiulhosp8"]
 
-[ext_resource type="Script" path="res://Scenes/main.gd" id="1_0gtyu"]
+[ext_resource type="Script" path="res://Scripts/main.gd" id="1_0gtyu"]
 [ext_resource type="Texture2D" uid="uid://di16b63182u02" path="res://Assets/Sprites/crokinoleboard.png" id="1_cmi87"]
-[ext_resource type="Script" path="res://Scenes/Score Nodes.gd" id="2_1mk02"]
+[ext_resource type="Script" path="res://Scripts/Score Nodes.gd" id="2_1mk02"]
+[ext_resource type="Texture2D" uid="uid://laa6uc3eldqk" path="res://Assets/Sprites/depositphotos_170344426-stock-photo-wooden-background (1).jpg" id="2_ug1qd"]
 [ext_resource type="Texture2D" uid="uid://c6kxhew26btlt" path="res://Assets/Sprites/blank-round-wooden-sign-free-png.png" id="4_r8mwt"]
 [ext_resource type="Texture2D" uid="uid://wk0benm8k60q" path="res://Assets/Sprites/black-circle.png" id="5_jb506"]
 
@@ -59,13 +60,22 @@ radius = 4.12311
 [node name="Main" type="Node2D" groups=["main"]]
 script = ExtResource("1_0gtyu")
 
+[node name="WoodenBAckground" type="TextureRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -56.0
+offset_right = 1608.0
+offset_bottom = 720.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_ug1qd")
+expand_mode = 1
+stretch_mode = 4
+flip_v = true
+
 [node name="board" type="StaticBody2D" parent="."]
 collision_layer = 2
-
-[node name="ColorRect" type="ColorRect" parent="board"]
-offset_right = 1152.0
-offset_bottom = 648.0
-color = Color(0.211765, 0.211765, 0.211765, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="board"]
 visible = false
@@ -287,4 +297,5 @@ text = " [color=blue] Player 1: 0[/color]
 [connection signal="body_exited" from="Score Nodes/Area2D" to="Score Nodes" method="_on_play_area_body_exited"]
 [connection signal="body_entered" from="Score Nodes/10 point Area2D" to="Score Nodes" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Score Nodes/10 point Area2D" to="Score Nodes" method="_on_area_2d_body_exited"]
+[connection signal="value_changed" from="HSlider" to="." method="_on_h_slider_value_changed"]
 [connection signal="pressed" from="exitButton" to="." method="_on_exit_button_pressed"]

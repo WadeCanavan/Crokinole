@@ -67,6 +67,7 @@ func new_disc():
 	curDisc.endShot.connect(on_disc_stop)
 
 func _on_h_slider_value_changed(value):
+	print(value)
 	slider.emit(value)
 
 func _on_exit_button_pressed():

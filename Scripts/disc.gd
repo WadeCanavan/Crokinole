@@ -53,6 +53,7 @@ func _integrate_forces(state):
 		curValue = 0
 
 func move_disc(value):
+	print(lastValue, "  ", value, "  ", curValue)
 	if lastValue < value:
 		curValue = value/200
 	else:

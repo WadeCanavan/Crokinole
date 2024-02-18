@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://8nshqde0geon"
-path="res://.godot/imported/WoodenBackground.jpg-5b07c0ebc95ea407376af7f7b9b1ebf9.ctex"
+uid="uid://laa6uc3eldqk"
+path="res://.godot/imported/depositphotos_170344426-stock-photo-wooden-background (1).jpg-b29c83bd84b2cb2bf3c4b5cbada1abb1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scenes/WoodenBackground.jpg"
-dest_files=["res://.godot/imported/WoodenBackground.jpg-5b07c0ebc95ea407376af7f7b9b1ebf9.ctex"]
+source_file="res://Assets/Sprites/depositphotos_170344426-stock-photo-wooden-background (1).jpg"
+dest_files=["res://.godot/imported/depositphotos_170344426-stock-photo-wooden-background (1).jpg-b29c83bd84b2cb2bf3c4b5cbada1abb1.ctex"]
 
 [params]
 
