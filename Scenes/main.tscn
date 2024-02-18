@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://Scenes/main.gd" id="1_0gtyu"]
 [ext_resource type="Texture2D" uid="uid://di16b63182u02" path="res://Assets/Sprites/crokinoleboard.png" id="1_cmi87"]
 [ext_resource type="Script" path="res://Scenes/Score Nodes.gd" id="2_1mk02"]
-[ext_resource type="PackedScene" uid="uid://cno7sihcglocf" path="res://Scenes/disc.tscn" id="2_ejfwc"]
+[ext_resource type="PackedScene" uid="uid://bry3ob2hkhwpf" path="res://Scenes/disc.tscn" id="2_ejfwc"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_crb3j"]
 radius = 270.007
@@ -129,7 +129,7 @@ position = Vector2(576, 320)
 shape = SubResource("CircleShape2D_het8c")
 debug_color = Color(1, 0.341176, 1, 0.419608)
 
-[node name="10 point Area2D" type="Area2D" parent="Score Nodes" groups=["blackDisk", "woodDisk"]]
+[node name="10 point Area2D" type="Area2D" parent="Score Nodes"]
 visible = false
 position = Vector2(576, 320)
 
@@ -214,7 +214,7 @@ offset_top = 536.0
 offset_right = 1112.0
 offset_bottom = 552.0
 
-[node name="disc" parent="Disc" instance=ExtResource("2_ejfwc")]
+[node name="disc" parent="Disc" groups=["woodDisk"] instance=ExtResource("2_ejfwc")]
 position = Vector2(768, 472)
 
 [node name="Score Box" type="Node" parent="."]
