@@ -137,9 +137,6 @@ position = Vector2(-1, 0)
 shape = SubResource("CircleShape2D_ktxo6")
 debug_color = Color(1, 0.341176, 1, 0.419608)
 
-[node name="RigidBody2D" parent="." instance=ExtResource("2_ejfwc")]
-visible = false
-
 [node name="Peggage" type="Node" parent="."]
 
 [node name="Peg 1" type="StaticBody2D" parent="Peggage"]

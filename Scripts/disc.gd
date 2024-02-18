@@ -9,17 +9,13 @@ var shot = false
 signal discShot
 signal endShot
 var signaled = false
-var counter = 0
 
 func _process(delta):
 	if shot && (linear_velocity.x > -1) && (linear_velocity.y > -1) && (linear_velocity.x < 1) && (linear_velocity.y < 1) && !signaled:
 		endShot.emit()
 		signaled = true
 		print(linear_velocity)
-		counter=+1
-		print(counter)
-		#if counter == 12
-		# this is where winner is determined
+		
 	
 func _on_input_event(viewport, event, shape_idx):
 	if event is InputEventMouseButton and  event.button_index == MOUSE_BUTTON_LEFT and event.pressed and not shot:
