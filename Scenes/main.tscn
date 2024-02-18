@@ -1,9 +1,8 @@
-[gd_scene load_steps=20 format=3 uid="uid://cwx8tiulhosp8"]
+[gd_scene load_steps=19 format=3 uid="uid://cwx8tiulhosp8"]
 
 [ext_resource type="Script" path="res://Scenes/main.gd" id="1_0gtyu"]
 [ext_resource type="Texture2D" uid="uid://di16b63182u02" path="res://Assets/Sprites/crokinoleboard.png" id="1_cmi87"]
 [ext_resource type="Script" path="res://Scenes/Score Nodes.gd" id="2_1mk02"]
-[ext_resource type="PackedScene" uid="uid://cno7sihcglocf" path="res://Scenes/disc.tscn" id="2_ejfwc"]
 [ext_resource type="Texture2D" uid="uid://c6kxhew26btlt" path="res://Assets/Sprites/blank-round-wooden-sign-free-png.png" id="4_r8mwt"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_crb3j"]
@@ -56,7 +55,7 @@ radius = 162.265
 [sub_resource type="CircleShape2D" id="CircleShape2D_f24vr"]
 radius = 4.12311
 
-[node name="Main" type="Node2D"]
+[node name="Main" type="Node2D" groups=["main"]]
 script = ExtResource("1_0gtyu")
 
 [node name="board" type="StaticBody2D" parent="."]
@@ -224,9 +223,6 @@ shape = SubResource("CircleShape2D_f24vr")
 
 [node name="Discs" type="Node2D" parent="."]
 
-[node name="disc" parent="Discs" groups=["woodDisk"] instance=ExtResource("2_ejfwc")]
-position = Vector2(768, 472)
-
 [node name="HSlider" type="HSlider" parent="."]
 offset_left = 848.0
 offset_top = 544.0
@@ -262,4 +258,3 @@ text = "  Player 1: 0
 [connection signal="body_exited" from="Score Nodes/Area2D" to="Score Nodes" method="_on_play_area_body_exited"]
 [connection signal="body_entered" from="Score Nodes/10 point Area2D" to="Score Nodes" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Score Nodes/10 point Area2D" to="Score Nodes" method="_on_area_2d_body_exited"]
-[connection signal="value_changed" from="HSlider" to="Discs/disc" method="_on_h_slider_value_changed"]

@@ -10,6 +10,12 @@ signal discShot
 signal endShot
 var signaled = false
 
+func _ready():
+	var main = get_tree().get_first_node_in_group("main")
+	main.slider.connect(move_disc)
+	#if self.is_in_group("black"):
+
+	
 func _process(delta):
 	if shot && (linear_velocity.x > -1) && (linear_velocity.y > -1) && (linear_velocity.x < 1) && (linear_velocity.y < 1) && !signaled:
 		endShot.emit()
@@ -46,12 +52,10 @@ func _integrate_forces(state):
 		position.y = origin.y + sin(angle + (curValue)) * 246.105651855469 
 		curValue = 0
 
-
-func _on_h_slider_value_changed(value):
+func move_disc(value):
 	if lastValue < value:
 		curValue = value/200
 	else:
 		curValue = value/200 * -1 
 	print(lastValue, "  ", value, "  ", curValue)
 	lastValue = value
-
