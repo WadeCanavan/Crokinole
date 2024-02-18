@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://cxutvmqktibx6"]
+[gd_scene load_steps=3 format=3 uid="uid://cxutvmqktibx6"]
 
 [ext_resource type="Texture2D" uid="uid://dxbry6dgbj6ir" path="res://Assets/Sprites/WoodenBackground2.jpg" id="1_lstvi"]
+[ext_resource type="Script" path="res://Scenes/winner.gd" id="1_mtq5l"]
 
 [node name="Winner" type="Control"]
 layout_mode = 3
@@ -9,8 +10,9 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_mtq5l")
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="Background" type="TextureRect" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -20,7 +22,7 @@ grow_vertical = 2
 texture = ExtResource("1_lstvi")
 expand_mode = 4
 
-[node name="RichTextLabel" type="RichTextLabel" parent="."]
+[node name="WoodWinnerLabel" type="RichTextLabel" parent="."]
 clip_contents = false
 layout_mode = 1
 anchors_preset = -1
@@ -36,3 +38,20 @@ theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 10
 theme_override_font_sizes/normal_font_size = 39
 text = "CONGRATULATIONS PLAYER 1 (Wood discs) YOU HAVE REACHED 200 POINTS FIRST!"
+
+[node name="BlackWinnerLabel" type="RichTextLabel" parent="."]
+clip_contents = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.148
+anchor_top = 0.245
+anchor_right = 0.854
+anchor_bottom = 0.432
+offset_left = 0.503998
+offset_top = 0.23999
+offset_right = 30.192
+offset_bottom = 65.064
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/normal_font_size = 39
+text = "CONGRATULATIONS PLAYER 2 (Black discs) YOU HAVE REACHED 200 POINTS FIRST!"
