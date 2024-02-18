@@ -17,24 +17,24 @@ func _process(delta):
 
 func _on_area_2d_body_entered(body):
 	if body.is_in_group("woodDisk") :
-		$"20 point/RichTextLabel".visible = false
+	
 		Global.woodPoints = 5 + Global.woodPoints
 		print(Global.woodPoints)
 	else :
 		if body.is_in_group("blackDisk") :
-			$"20 point/RichTextLabel".visible = false
+			
 			Global.blackPoints = 5 + Global.blackPoints
 
 
 func _on_area_2d_body_exited(body):
 	if body.is_in_group("woodDisk") :
-		$"20 point/RichTextLabel".visible = false
+		#$"20 point/RichTextLabel".visible = false
 		Global.woodPoints =  Global.woodPoints - 5
 		print(Global.woodPoints)
 		
 	else :
 		if body.is_in_group("blackDisk") :
-			$"20 point/RichTextLabel".visible = false
+			#$"20 point/RichTextLabel".visible = false
 			Global.blackPoints = Global.blackPoints - 5
 
 
@@ -57,7 +57,7 @@ func _on_play_area_body_exited(body):
 	
 	if body.is_in_group("woodDisk") :
 		Global.woodPoints =  Global.woodPoints - 5
-		$"20 point/RichTextLabel".visible = false
+		#$"20 point/RichTextLabel".visible = false
 		
 		print(Global.woodPoints)
 		body.queue_free()
@@ -65,6 +65,6 @@ func _on_play_area_body_exited(body):
 		if body.is_in_group("blackDisk") :
 			
 			Global.blackPoints = Global.blackPoints - 5
-			$"20 point/RichTextLabel".visible = false
+			#$"20 point/RichTextLabel".visible = false
 			
 			body.queue_free()
