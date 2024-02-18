@@ -58,12 +58,12 @@ func _on__point_body_entered(body):
 			
 			Global.blackPoints = Global.blackPoints +20
 			$"20 point/RichTextLabel".visible = true
-			$"20 point/TextureRect".visible = true
+			$"20 point/TextureRect2".visible = true
 			
 			body.queue_free()
 			await get_tree().create_timer(4.0).timeout
 			$"20 point/RichTextLabel".visible = false
-			$"20 point/TextureRect".visible = false
+			$"20 point/TextureRect2".visible = false
 			twenty.emit()
 
 func _on_play_area_body_exited(body):
