@@ -1,9 +1,10 @@
-[gd_scene load_steps=19 format=3 uid="uid://cwx8tiulhosp8"]
+[gd_scene load_steps=20 format=3 uid="uid://cwx8tiulhosp8"]
 
 [ext_resource type="Script" path="res://Scenes/main.gd" id="1_0gtyu"]
 [ext_resource type="Texture2D" uid="uid://di16b63182u02" path="res://Assets/Sprites/crokinoleboard.png" id="1_cmi87"]
 [ext_resource type="Script" path="res://Scenes/Score Nodes.gd" id="2_1mk02"]
 [ext_resource type="PackedScene" uid="uid://cno7sihcglocf" path="res://Scenes/disc.tscn" id="2_ejfwc"]
+[ext_resource type="Texture2D" uid="uid://c6kxhew26btlt" path="res://Assets/Sprites/blank-round-wooden-sign-free-png.png" id="4_r8mwt"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_crb3j"]
 radius = 270.007
@@ -121,6 +122,14 @@ offset_bottom = -249.0
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 9
 text = "You just sunk it in the center! +20 points!"
+
+[node name="TextureRect" type="TextureRect" parent="Score Nodes/20 point"]
+offset_left = -16.0
+offset_top = -13.0
+offset_right = 12.0
+offset_bottom = 13.0
+texture = ExtResource("4_r8mwt")
+expand_mode = 3
 
 [node name="15 point Area2D" type="Area2D" parent="Score Nodes"]
 visible = false

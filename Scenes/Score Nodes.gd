@@ -39,18 +39,32 @@ func _on_area_2d_body_exited(body):
 
 
 func _on__point_body_entered(body):
+	var origin = Vector2( 576, 316.039 )
 	if body.is_in_group("woodDisk") and body.linear_velocity.length() <= 100:
 		Global.woodPoints =  Global.woodPoints +20
 		$"20 point/RichTextLabel".visible = true
-		print(Global.woodPoints)
+		$"20 point/TextureRect".visible = true
 		
 		body.queue_free()
+		await get_tree().create_timer(4.0).timeout
+		$"20 point/RichTextLabel".visible = false
+		$"20 point/TextureRect".visible = false
+		
+		print(Global.woodPoints)
+		
+		
 	else :
 		if body.is_in_group("blackDisk") and body.linear_velocity.length() <= 100:
 			
 			Global.blackPoints = Global.blackPoints +20
 			$"20 point/RichTextLabel".visible = true
+			$"20 point/TextureRect".visible = true
+			
 			body.queue_free()
+			await get_tree().create_timer(4.0).timeout
+			$"20 point/RichTextLabel".visible = false
+			$"20 point/TextureRect".visible = false
+			
 
 
 func _on_play_area_body_exited(body):

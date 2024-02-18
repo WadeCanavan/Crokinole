@@ -10,6 +10,8 @@ func _ready():
 	new_disc()
 	curDisc.discShot.connect(on_disc_shot)
 	curDisc.endShot.connect(on_disc_stop)
+	$"Score Nodes/20 point/RichTextLabel".visible = false
+	$"Score Nodes/20 point/TextureRect".visible = false
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
