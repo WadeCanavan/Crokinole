@@ -23,15 +23,19 @@ func _input(event):
 			linear_velocity = force * 5
 
 func _integrate_forces(state):
-	print(curValue)
+	#print(curValue)
 	if curValue != 0 :
 		var origin = Vector2( 576, 316.039 )
-		print( origin.distance_to(Vector2(position.x,position.y)))
+		#print( origin.distance_to(Vector2(position.x,position.y)))
 		var angle = origin.angle_to_point( Vector2(position.x,position.y))
-		position.x = origin.x + cos(angle + (curValue)) * 246.105651855469
-		position.y = origin.y + sin(angle + (curValue)) * 246.105651855469
-		lastValue = curValue
+		position.x = origin.x + cos(angle + (curValue)) * 246.105651855469 
+		position.y = origin.y + sin(angle + (curValue)) * 246.105651855469 
 		curValue = 0
 		
 func _on_h_slider_value_changed(value):
-	curValue = value - lastValue
+	if lastValue < value:
+		curValue = value/200
+	else:
+		curValue = value/200 * -1 
+	print(lastValue, "  ", value, "  ", curValue)
+	lastValue = value
