@@ -40,7 +40,7 @@ func _integrate_forces(state):
 	#print(curValue)
 	if curValue != 0 and not shot:
 		var origin = Vector2( 576, 316.039 )
-		#print( origin.distance_to(Vector2(position.x,position.y)))
+		print( origin.distance_to(Vector2(position.x,position.y)))
 		var angle = origin.angle_to_point( Vector2(position.x,position.y))
 		position.x = origin.x + cos(angle + (curValue)) * 246.105651855469 
 		position.y = origin.y + sin(angle + (curValue)) * 246.105651855469 
