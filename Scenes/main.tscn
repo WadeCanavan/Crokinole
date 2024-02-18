@@ -62,6 +62,11 @@ script = ExtResource("1_0gtyu")
 [node name="board" type="StaticBody2D" parent="."]
 collision_layer = 2
 
+[node name="ColorRect" type="ColorRect" parent="board"]
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0.211765, 0.211765, 0.211765, 1)
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="board"]
 visible = false
 position = Vector2(576, 320)
@@ -241,6 +246,20 @@ max_value = 9.0
 step = 0.001
 value = 4.5
 
+[node name="exitButton" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.435
+anchor_top = 0.887
+anchor_right = 0.563
+anchor_bottom = 0.965
+offset_left = 1112.0
+offset_top = 8.0
+offset_right = 1154.0
+offset_bottom = 39.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "X"
+
 [node name="scoreBox" type="Node" parent="."]
 
 [node name="Score" type="RichTextLabel" parent="scoreBox"]
@@ -251,13 +270,14 @@ anchor_right = 0.233
 anchor_bottom = 0.252
 offset_left = -0.432001
 offset_top = -0.144001
-offset_right = -0.416016
-offset_bottom = -0.296005
+offset_right = -0.415985
+offset_bottom = -27.296
 grow_horizontal = 2
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 15
 theme_override_font_sizes/normal_font_size = 25
-text = "  Player 1: 0
+bbcode_enabled = true
+text = " [color=blue] Player 1: 0[/color]
   Player 2: 0"
 
 [connection signal="body_entered" from="Score Nodes/20 point" to="Score Nodes" method="_on__point_body_entered"]
@@ -267,3 +287,4 @@ text = "  Player 1: 0
 [connection signal="body_exited" from="Score Nodes/Area2D" to="Score Nodes" method="_on_play_area_body_exited"]
 [connection signal="body_entered" from="Score Nodes/10 point Area2D" to="Score Nodes" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Score Nodes/10 point Area2D" to="Score Nodes" method="_on_area_2d_body_exited"]
+[connection signal="pressed" from="exitButton" to="." method="_on_exit_button_pressed"]
