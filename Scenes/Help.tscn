@@ -91,14 +91,38 @@ offset_right = 375.424
 offset_bottom = 216.76
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 5
-text = "a) discs that land in the outermost circle are worth 
-e) If a disk makes it into the center hole, it is worth 20 points, and will be removed.
+text = "a) Discs that land in the outermost circle are worth 5 points
+b) Discs that land in the second to outermost circle are worth 10 points
+c) Discs that land in the innermost circle are worth 15 points
+d) If a disk makes it into the center hole, it is worth 20 points, and will be removed.
+e) If a disc falls off the edge of the board it will be removed
+f) 8 pegs are placed on the edge of the innermost circle as an obstacle
+g) Any click on a disc counts as a shot
+h) If a disc is pushed by another disc it will be worth the amount of points where it lands
 
 
 
 
-In order to flick the disc, click and drag on the disc, away from where you want it to go. On release it will flick it!
+
+In order to flick the disc, click and drag on the disc, away from where you want it to go. On release it will flick it! The farther away you drag from the disc the farther the disc will travel
 Move slider to move disc along the schooting line
 "
 
+[node name="exitHelpButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.435
+anchor_top = 0.887
+anchor_right = 0.563
+anchor_bottom = 0.965
+offset_left = 577.88
+offset_top = -585.776
+offset_right = 506.424
+offset_bottom = -559.32
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 50
+text = "x"
+
 [connection signal="pressed" from="PlayGameButton" to="." method="_on_play_game_button_pressed"]
+[connection signal="pressed" from="exitHelpButton" to="." method="_on_exit_help_button_pressed"]

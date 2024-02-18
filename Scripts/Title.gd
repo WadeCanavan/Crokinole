@@ -27,3 +27,7 @@ func _on_exit_button_pressed():
 
 func _on_exit_game_button_pressed():
 	get_tree().quit()
+
+
+func _on_exit_help_button_pressed():
+	get_tree().change_scene_to_file("res://Scenes/Title.tscn")
