@@ -215,9 +215,9 @@ offset_left = 832.0
 offset_top = 544.0
 offset_right = 1096.0
 offset_bottom = 560.0
-max_value = 5.0
-step = 0.01
-value = 0.5
+max_value = 9.0
+step = 0.001
+value = 4.5
 
 [node name="scoreBox" type="Node" parent="."]
 
