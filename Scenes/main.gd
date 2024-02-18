@@ -1,5 +1,5 @@
 extends Node2D
-var lastValue
+var lastValue = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -21,7 +21,3 @@ func _boardCheck():
 	if !$disc.is_in_node($board):
 		queue_free()
 	pass
-
-func _on_h_slider_value_changed(value):
-	$"Discs/disc".value = value - lastValue
-	var lastValue = value

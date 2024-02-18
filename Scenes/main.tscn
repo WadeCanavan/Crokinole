@@ -206,7 +206,7 @@ position = Vector2(547, 244)
 position = Vector2(-1, 0)
 shape = SubResource("CircleShape2D_f24vr")
 
-[node name="Disc" type="Node2D" parent="."]
+[node name="Discs" type="Node2D" parent="."]
 
 [node name="HSlider" type="HSlider" parent="Disc"]
 offset_left = 848.0
@@ -214,8 +214,17 @@ offset_top = 536.0
 offset_right = 1112.0
 offset_bottom = 552.0
 
-[node name="disc" parent="Disc" groups=["woodDisk"] instance=ExtResource("2_ejfwc")]
+[node name="disc" parent="Discs" groups=["woodDisk"] instance=ExtResource("2_ejfwc")]
 position = Vector2(768, 472)
+
+[node name="HSlider" type="HSlider" parent="."]
+offset_left = 210.0
+offset_top = 186.0
+offset_right = 474.0
+offset_bottom = 202.0
+min_value = -0.5
+max_value = 0.5
+step = 0.01
 
 [node name="Score Box" type="Node" parent="."]
 
@@ -243,4 +252,4 @@ text = "  Player 1:
 [connection signal="body_exited" from="Score Nodes/Area2D" to="Score Nodes" method="_on_play_area_body_exited"]
 [connection signal="body_entered" from="Score Nodes/10 point Area2D" to="Score Nodes" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Score Nodes/10 point Area2D" to="Score Nodes" method="_on_area_2d_body_exited"]
-[connection signal="value_changed" from="Disc/HSlider" to="." method="_on_h_slider_value_changed"]
+[connection signal="value_changed" from="HSlider" to="Discs/disc" method="_on_h_slider_value_changed"]

@@ -9,6 +9,7 @@ radius = 240.0
 [node name="disc" type="RigidBody2D"]
 position = Vector2(576, 320)
 input_pickable = true
+can_sleep = false
 linear_damp = 2.0
 script = ExtResource("1_5wjyq")
 
