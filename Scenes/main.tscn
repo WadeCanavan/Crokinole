@@ -227,9 +227,9 @@ max_value = 0.5
 step = 0.01
 value = 0.5
 
-[node name="Score Box" type="Node" parent="."]
+[node name="scoreBox" type="Node" parent="."]
 
-[node name="Score" type="RichTextLabel" parent="Score Box"]
+[node name="Score" type="RichTextLabel" parent="scoreBox"]
 anchors_preset = -1
 anchor_left = 0.016
 anchor_top = 0.028
@@ -243,8 +243,8 @@ grow_horizontal = 2
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 15
 theme_override_font_sizes/normal_font_size = 25
-text = "  Player 1:
-  Player 2:"
+text = "  Player 1: 0
+  Player 2: 0"
 
 [connection signal="body_entered" from="Score Nodes/20 point" to="Score Nodes" method="_on__point_body_entered"]
 [connection signal="body_entered" from="Score Nodes/15 point Area2D" to="Score Nodes" method="_on_area_2d_body_entered"]
