@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://d0bg8mtvrtchh"]
+[gd_scene load_steps=3 format=3 uid="uid://dw2xo6r66r8dc"]
 
 [ext_resource type="Script" path="res://Scripts/Title.gd" id="1_2y45y"]
 [ext_resource type="Texture2D" uid="uid://dxbry6dgbj6ir" path="res://Assets/Sprites/WoodenBackground2.jpg" id="2_npg84"]
@@ -100,7 +100,7 @@ e) If a disk makes it into the center hole, it is worth 20 points, and should be
 
 
 
-Flick!
+In order to flick the disc, click and drag on the disc, away from where you want it to go. on release it will flick it!
 "
 
 [connection signal="pressed" from="PlayGameButton" to="." method="_on_play_game_button_pressed"]
