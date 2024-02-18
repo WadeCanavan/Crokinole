@@ -91,16 +91,14 @@ offset_right = 375.424
 offset_bottom = 216.76
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 5
-text = "a) lf any opposing discs are in play, at least one of the shooters discs must strike an opposing disc either directly or by bumping one of their discs already in play into an opposing disc. If an opposing disc is not hit, it is not a valid shot.
-b) lf there are no opposing discs in play, the shooting disc or at least one disc struck during the shot must end up touching or within the 15 line.  (A 20 is considered within the 15 line)
-c) lf a valid shot is not made, the shooting disc and all of the other discs that were struck, including any 20's, are removed and placed in the ditch. 
-d) If a disk crosses the shooting line, it is considered out of play and will be removed.
-e) If a disk makes it into the center hole, it is worth 20 points, and should be removed.
+text = "a) discs that land in the outermost circle are worth 
+e) If a disk makes it into the center hole, it is worth 20 points, and will be removed.
 
 
 
 
-In order to flick the disc, click and drag on the disc, away from where you want it to go. on release it will flick it!
+In order to flick the disc, click and drag on the disc, away from where you want it to go. On release it will flick it!
+Move slider to move disc along the schooting line
 "
 
 [connection signal="pressed" from="PlayGameButton" to="." method="_on_play_game_button_pressed"]
