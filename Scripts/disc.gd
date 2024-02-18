@@ -2,6 +2,9 @@ extends RigidBody2D
 
 var pressed = false
 var clickPos
+
+var value = 0 
+
 func _on_input_event(viewport, event, shape_idx):
 	if event is InputEventMouseButton and  event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
 			#print("Left button was clicked at ", event.position)
@@ -17,3 +20,12 @@ func _input(event):
 			#print("distance to disc ", distance)
 			#print(clickPos.x, event.position.x, clickPos.y, event.position.y)
 			linear_velocity = force * 5
+
+func _integrate_forces(state):
+	if value != 0 :
+		var origin = Vector2( 576, 316.039 )
+		print( origin.distance_to(Vector2(position.x,position.y)))
+		var angle = origin.angle_to_point( Vector2(position.x,position.y))
+		position.x = origin.x + cos(angle + (value)) * 246.105651855469
+		position.y = origin.y + sin(angle + (value)) * 246.105651855469
+		value = 0

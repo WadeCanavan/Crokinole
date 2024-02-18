@@ -206,8 +206,11 @@ position = Vector2(547, 244)
 position = Vector2(-1, 0)
 shape = SubResource("CircleShape2D_f24vr")
 
-[node name="disc" parent="." instance=ExtResource("2_ejfwc")]
+[node name="Disc" type="Node2D" parent="."]
 position = Vector2(359, 319)
+
+[node name="disc" parent="Disc" instance=ExtResource("2_ejfwc")]
+position = Vector2(0, 0)
 
 [node name="Score Box" type="Node" parent="."]
 
