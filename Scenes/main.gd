@@ -4,8 +4,8 @@ var woodShotCount = 0
 var blackShotCount = 0
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
-
+	var disc = $Discs/disc
+	disc.discShot.connect(on_disc_shot)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -29,3 +29,7 @@ func _boardCheck():
 	if !$disc.is_in_node($board):
 		queue_free()
 	pass
+	
+func on_disc_shot():
+	print("signaled")
+

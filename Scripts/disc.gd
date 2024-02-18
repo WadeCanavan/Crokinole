@@ -6,7 +6,10 @@ var clickPos
 var lastValue = 0 
 var curValue = 0 
 var shot = false
+signal discShot
 
+
+	
 func _on_input_event(viewport, event, shape_idx):
 	if event is InputEventMouseButton and  event.button_index == MOUSE_BUTTON_LEFT and event.pressed and not shot:
 			#print("Left button was clicked at ", event.position)
@@ -23,6 +26,7 @@ func _input(event):
 			#print(clickPos.x, event.position.x, clickPos.y, event.position.y)
 			linear_velocity = force * 5
 			shot = true
+			discShot.emit()
 
 func _integrate_forces(state):
 	#print(curValue)
