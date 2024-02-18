@@ -37,7 +37,7 @@ offset_bottom = 65.064
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 10
 theme_override_font_sizes/normal_font_size = 39
-text = "CONGRATULATIONS PLAYER 1 (Wood discs) YOU HAVE REACHED 200 POINTS FIRST!"
+text = "CONGRATULATIONS PLAYER 1 (Wood discs) YOU HAVE THE MOST POINTS AFTER 6 SHOTS"
 
 [node name="BlackWinnerLabel" type="RichTextLabel" parent="."]
 clip_contents = false
@@ -54,4 +54,4 @@ offset_bottom = 65.064
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 10
 theme_override_font_sizes/normal_font_size = 39
-text = "CONGRATULATIONS PLAYER 2 (Black discs) YOU HAVE REACHED 200 POINTS FIRST!"
+text = "CONGRATULATIONS PLAYER 2 (Black discs) YOU HAVE THE MOST POINTS AFTER 6 SHOTS!"

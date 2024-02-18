@@ -3,7 +3,7 @@ extends Control
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	if Global.woodTotalPoints > Global.blackTotalPoints :
+	if Global.woodPoints > Global.blackPoints :
 		$BlackWinnerLabel.set_text("")
 	else :
 		$WoodWinnerLabel.set_text("")
