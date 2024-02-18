@@ -10,20 +10,14 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	if get_node("/root/Main/Discs/disc"):
-		get_node("/root/Main/scoreBox/Score").text = str("  Player 1: ", Global.woodPoints, "\n  Player 2: ", Global.blackPoints)
+	
 	pass
 
 # Function to change the score box
-func _setScore(blackShotCount, whiteShotCount):
-	if (blackShotCount && whiteShotCount) == 12:
-		$Score.set_text = ("  Player 1: " + Global.woodPoints + "\n  Player 2: " + Global.blackPoints)
-	pass
-
-# Function to change the score box after shot
-func _setScoreAfterShot(blackShotCount, whiteShotCount):
-	$Score.set_text = ("  Player 1: " + Global.woodPoints + "\n  Player 2: " + Global.blackPoints)
-	pass
+# func _setScore(blackShotCount, whiteShotCount):
+	#if (blackShotCount && whiteShotCount) == 12:
+		#$Score.set_text = ("  Player 1: " + Global.woodPoints + "\n  Player 2: " + Global.blackPoints)
+	#pass
 
 # Checks if disc is on board still
 func _boardCheck():
